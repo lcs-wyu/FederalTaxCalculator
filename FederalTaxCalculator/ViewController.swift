@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var name: UITextField!
+    
+    @IBOutlet weak var grossAnnualIncome: UITextField!
+    
+    @IBOutlet weak var outputTaxesOwing: UILabel!
+    
+    @IBOutlet weak var outPutEffectiveTaxRate: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,6 +26,11 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBAction func calculateTaxOwing(_ sender: Any) {
+        
+        
+        
+    }
+    
 }
 
