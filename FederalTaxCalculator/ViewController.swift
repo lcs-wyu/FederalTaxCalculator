@@ -69,11 +69,11 @@ class ViewController: UIViewController {
         default:
             taxOwing = (grossAnnualIncomeAsDouble - 210371) * 0.33 + 47630 * 0.15 + 47629 * 0.205 + 52408 * 0.26 + 62704 * 0.29
         }
-        
+        let effectiveTaxRate = Double(taxOwing/grossAnnualIncomeAsDouble * 100)
         // 4. Send results to the labels
         
-        outputTaxesOwing .text="\(userNameAsString) your federal tax owing is \(taxOwing)."
-        outPutEffectiveTaxRate .text="Your effec"
+        outputTaxesOwing .text="\(userNameAsString) your federal tax owing is $\(taxOwing)."
+        outPutEffectiveTaxRate .text="Your effective tax rate is \(effectiveTaxRate)%"
     }
     
     
