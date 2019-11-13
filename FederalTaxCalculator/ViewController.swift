@@ -56,13 +56,26 @@ class ViewController: UIViewController {
         }
         
         // 3. Switch based on the income bracket
-        
+        var taxOwing = Double()
+        switch grossAnnualIncomeAsDouble {
+        case 0...47630:
+            var taxOwing = grossAnnualIncomeAsDouble * 0.15
+        case 47630.01...95259:
+            var taxOwing = (grossAnnualIncomeAsDouble - 47630) * 0.205 + 47630 * 0.15
+        case 95259.01...147667:
+            var taxOwing = (grossAnnualIncomeAsDouble - 95259) * 0.26 + 47629 * 0.205 + 47630 * 0.15
+        case 147667.01...201731:
+            var taxOwing = (grossAnnualIncomeAsDouble - 147667) * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
+        default:
+            var taxowing = (grossAnnualIncomeAsDouble - 210371) * 0.33 + 47630 * 0.15 + 47629 * 0.205 + 52408 * 0.26 + 62704 * 0.29
+        }
         // 4. Send results to the labels
         
         
         
     }
     
+
+
+
 }
-
-
