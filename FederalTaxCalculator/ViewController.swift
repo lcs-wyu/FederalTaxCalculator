@@ -82,10 +82,14 @@ class ViewController: UIViewController {
         var effectiveTaxRate = Double()
         effectiveTaxRate = taxOwing/grossAnnualIncomeAsDouble
         let effectiveTaxRateInPercentage = effectiveTaxRate * 100
-        // 4. Send results to the labels
         
-        outputTaxesOwing .text="\(userNameAsString) your federal tax owing is $\(taxOwing)."
-        outPutEffectiveTaxRate .text="Your effective tax rate is \(effectiveTaxRateInPercentage)%"
+        // Format the output as currency and as a percentage rounded to 1 decimal place
+        let taxOwingRounded = String(format: "%.2f", taxOwing)
+        let effectiveTaxRateRounded = String(format: "%.1f", effectiveTaxRateInPercentage)
+
+        // 4. Send results to the labels
+        outputTaxesOwing.text = "\(userNameAsString) your federal tax owing is $\(taxOwingRounded)."
+        outPutEffectiveTaxRate.text = "Your effective tax rate is \(effectiveTaxRateRounded)%"
     }
     
     
