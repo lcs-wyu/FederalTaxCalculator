@@ -29,6 +29,11 @@ class ViewController: UIViewController {
     
     @IBAction func calculateTaxOwing(_ sender: Any) {
         
+        // 0. Reset output labels
+        outputTaxesOwing.text = ""
+        outPutEffectiveTaxRate.text = ""
+        
+        
         // 1. Get the values from the user as String
         // Use guard let...
         
