@@ -34,7 +34,12 @@ class ViewController: UIViewController {
         
         guard let userNameAsString = name.text
             else {
-                outputTaxesOwing .text="Please enter a proper name."
+                outputTaxesOwing.text = "Please enter a proper name."
+            return
+        }
+        
+        if userNameAsString == "" {
+            outputTaxesOwing.text = "Please enter a proper name."
             return
         }
         
